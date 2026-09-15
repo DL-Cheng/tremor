@@ -1,6 +1,6 @@
 /* TremorSense — minimal offline-cache service worker for PWA installability. */
 
-const CACHE_NAME = 'tremorsense-v1';
+const CACHE_NAME = 'tremorsense-v2';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -8,7 +8,10 @@ const CORE_ASSETS = [
   './js/app.js',
   './manifest.json',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './images/pose-rest.jpg',
+  './images/pose-postural.jpg',
+  './images/pose-action.jpg'
 ];
 
 self.addEventListener('install', (event) => {

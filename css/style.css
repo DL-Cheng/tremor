@@ -243,15 +243,14 @@ button { font-family: inherit; }
   box-shadow: var(--shadow-soft);
   padding: 26px;
 }
-.instruction-diagram { flex: 0 0 auto; width: 150px; height: 150px; position: relative; }
-.pose-svg { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--blue-700); display: none; }
+.instruction-diagram { flex: 0 0 auto; width: 190px; height: 190px; position: relative; border-radius: var(--radius-md); overflow: hidden; background: var(--blue-50); box-shadow: var(--shadow-card); }
+.pose-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: none;
+}
 .pose-svg.active { display: block; }
-.pose-bg { fill: var(--blue-50); stroke: none; }
-.pose-line { fill: none; stroke: currentColor; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
-.pose-line.pose-nofill { fill: var(--white); }
-.pose-line.pose-muted { stroke: var(--ink-300); stroke-width: 2.6; }
-.pose-line.pose-dashed { stroke-dasharray: 5 5; stroke: var(--cyan-400); }
-.pose-device { fill: var(--blue-700); }
 .instruction-body h3 { margin: 0 0 8px; color: var(--blue-900); font-size: 19px; }
 .instruction-body p { margin: 0 0 14px; color: var(--ink-700); font-size: 14px; line-height: 1.6; }
 .instruction-checklist { margin: 0; padding-left: 18px; color: var(--ink-700); font-size: 13.5px; line-height: 1.9; }
@@ -352,4 +351,6 @@ td { color: var(--ink-700); }
   .pulse-strip { order: 3; flex: 1 1 100%; }
   .brand { flex-wrap: wrap; row-gap: 4px; }
   .ipitex-badge { margin-left: 0; }
+  .instruction-card { flex-direction: column; align-items: center; text-align: center; }
+  .instruction-diagram { width: 100%; max-width: 260px; height: auto; aspect-ratio: 1 / 1; }
 }
